@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelBloom | Home</title>
+  <link rel="stylesheet" href="travel_recommendation.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html" class="nav-brand">
+      <img src="images/logo.svg" alt="TravelBloom Logo" id="logo">
+      <span>TravelBloom</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about_us.html">About Us</a></li>
+      <li><a href="contact_us.html">Contact Us</a></li>
+    </ul>
+
+    <div class="search-box">
+      <input type="search" id="search" name="search" placeholder="Enter a destination or keyword" autocomplete="off">
+      <button type="button" id="btnSearch" class="btn-search" onclick="searchRecommendations()">Search</button>
+      <button type="button" id="btnClear" class="btn-clear" onclick="clearResults()">Clear</button>
+    </div>
+  </nav>
+
+  <!-- Side Social Links -->
+  <aside class="social-sidebar">
+    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter / X">
+      <img src="images/twitter.svg" alt="Twitter">
+    </a>
+    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook">
+      <img src="images/facebook.svg" alt="Facebook">
+    </a>
+    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">
+      <img src="images/instagram.svg" alt="Instagram">
+    </a>
+    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube">
+      <img src="images/youtube.svg" alt="YouTube">
+    </a>
+  </aside>
+
+  <!-- Hero & Results Layout -->
+  <main class="hero-container">
+    <div class="hero-left">
+      <div class="hero-badge">✈️ Your Journey Begins Here</div>
+      <h1>EXPLORE<br><span>DREAM DESTINATION</span></h1>
+      <p class="hero-description">
+        Discover breathtaking wonders across the globe. From serene tropical beaches and timeless sacred temples to vibrant cosmopolitan cities, uncover curated travel recommendations tailored for your next unforgettable adventure.
+      </p>
+      <button type="button" class="btn-book-now" onclick="handleBookNow()">
+        <span>Book Now</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+
+    <!-- Recommendations Results Column -->
+    <div id="results" class="results-container"></div>
+  </main>
+
+  <!-- Application Script -->
+  <script src="travel_recommendation.js"></script>
+</body>
+</html>

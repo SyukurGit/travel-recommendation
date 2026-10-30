@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelBloom | Contact Us</title>
+  <link rel="stylesheet" href="travel_recommendation.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html" class="nav-brand">
+      <img src="images/logo.svg" alt="TravelBloom Logo" id="logo">
+      <span>TravelBloom</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about_us.html">About Us</a></li>
+      <li><a href="contact_us.html" class="active">Contact Us</a></li>
+    </ul>
+
+    <div class="search-box">
+      <input type="search" id="search" name="search" placeholder="Enter a destination or keyword" autocomplete="off">
+      <button type="button" id="btnSearch" class="btn-search" onclick="location.href='index.html'">Search</button>
+      <button type="button" id="btnClear" class="btn-clear" onclick="location.href='index.html'">Clear</button>
+    </div>
+  </nav>
+
+  <!-- Side Social Links -->
+  <aside class="social-sidebar">
+    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter / X">
+      <img src="images/twitter.svg" alt="Twitter">
+    </a>
+    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook">
+      <img src="images/facebook.svg" alt="Facebook">
+    </a>
+    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">
+      <img src="images/instagram.svg" alt="Instagram">
+    </a>
+    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube">
+      <img src="images/youtube.svg" alt="YouTube">
+    </a>
+  </aside>
+
+  <!-- Contact Container -->
+  <div class="page-container">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h1>CONTACT US</h1>
+        <p>
+          Have questions about your next destination or need personalized travel advice? Reach out to our concierge team—we are here to guide your journey every step of the way.
+        </p>
+
+        <div class="contact-details">
+          <div class="contact-item">
+            <span class="icon">📍</span>
+            <span>Jl. Sudirman No. 45, Jakarta & Global Remote</span>
+          </div>
+          <div class="contact-item">
+            <span class="icon">✉️</span>
+            <span>concierge@travelbloom.com</span>
+          </div>
+          <div class="contact-item">
+            <span class="icon">📞</span>
+            <span>+62 (21) 555-8901</span>
+          </div>
+          <div class="contact-item">
+            <span class="icon">🕒</span>
+            <span>Monday – Friday: 09:00 AM – 06:00 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-card">
+        <form class="contact-form" id="contactForm" onsubmit="handleContactSubmit(event)">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="name@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us about your dream destination..." required></textarea>
+          </div>
+
+          <button type="submit" id="btnSubmit" class="btn-submit">Send Message</button>
+          <div class="form-alert" id="formAlert">Thank you! Your message has been sent successfully. We will respond within 24 hours.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function handleContactSubmit(event) {
+      event.preventDefault();
+      const alertBox = document.getElementById('formAlert');
+      const form = document.getElementById('contactForm');
+      alertBox.style.display = 'block';
+      alert('Thank you for contacting TravelBloom! Your message has been submitted successfully.');
+      form.reset();
+      setTimeout(() => {
+        alertBox.style.display = 'none';
+      }, 5000);
+    }
+  </script>
+</body>
+</html>
